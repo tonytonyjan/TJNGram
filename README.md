@@ -8,7 +8,7 @@ It's common to see Chinese, Jananse and Korean articles contain some English, bu
 
 ## Usage
 
-    require '../lib/tjngram'
+    require 'tjngram'
 
     text = <<eos
     這是一個範例。
@@ -23,3 +23,13 @@ It's common to see Chinese, Jananse and Korean articles contain some English, bu
     puts text, "=========="
 
     TJNGram.process(2, text) #=> {"一個"=>2, "これ"=>2, "is an"=>2, ...}
+    
+## Note
+
+If your file is utf-8 encoded, please run ruby with the following options:
+
+    ruby -Ku example.rb
+
+It's strongly recommand you make your all script files utf-8 encoded.
+
+    
